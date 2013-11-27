@@ -35,13 +35,13 @@
     <ClCompile Include="J_Utile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\J_Error\J_Error.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="j_limits.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="j_type.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="J_Error.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

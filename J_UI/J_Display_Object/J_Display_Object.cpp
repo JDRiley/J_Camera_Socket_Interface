@@ -1,6 +1,6 @@
 #include "J_Display_Object.h"
-#include "../../J_Error/J_Error.h"
-#include "../../J_OpenGl/J_Shader_Program.h"
+#include <J_Error.h>
+#include <J_Shader_Program.h>
 #include "../J_View.h"
 #include "../../J_OpenGl/J_OpenGL.h"
 #include <J_Utile.h>

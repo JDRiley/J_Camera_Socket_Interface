@@ -1,4 +1,4 @@
-#include "../../J_Error/J_Error.h"
+#include <J_Error.h>
 #include "J_Image.h"
 
 

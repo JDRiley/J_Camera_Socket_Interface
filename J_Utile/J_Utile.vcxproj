@@ -219,7 +219,7 @@
     <ClInclude Include="J_Utile.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\J_Error\J_Error.cpp" />
+    <ClCompile Include="J_Error.cpp" />
     <ClCompile Include="j_limits.cpp" />
     <ClCompile Include="j_type.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
