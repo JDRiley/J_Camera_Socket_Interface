@@ -142,7 +142,7 @@ J_Camera_Socket_Controller::J_Camera_Socket_Controller(){
 	default_initialization();
 #endif //!VS_2013
 	M_continue_flag = true; 
-	M_socket = J_Socket_Server_Shared_t(new J_Socket_Server(9002));
+	//M_socket = J_Socket_Server_Shared_t(new J_Socket_Server(9002));
 	M_manager_view 
 		= J_View_Shared_t(new J_View(1500, 800, "J_Camera_Manager"));
 
@@ -647,14 +647,19 @@ void J_Camera_Socket_Controller::cursor_pos_input_cmd(j_window_t i_window, j_dbl
 }
 
 
-void J_Camera_Socket_Controller::derived_init(){
+void J_Camera_Socket_Controller::derived_init(int argc, char** argv){
 	//initialize_text_data();
 	glfwSetCursorPosCallback(M_manager_view->get_window(), cursor_pos_callback);
 	glfwSetMouseButtonCallback(M_manager_view->get_window()
 		, camera_interface_mouse_button_callback);
 	glfwSetWindowCloseCallback(M_manager_view->get_window()
 		, camera_interface_window_close_callback);
-
+	short socket_number = 0;
+	if(argc > 1){
+		socket_number = safe_cast<short>(atoi(argv[1]));
+	}
+	socket_number = socket_number ? socket_number : 9002;
+	M_socket = J_Socket_Server_Shared_t(new J_Socket_Server(socket_number));
 }
 
 void J_Camera_Socket_Controller::remove_view(j_window_t i_window){

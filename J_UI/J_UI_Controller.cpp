@@ -15,8 +15,8 @@ namespace jomike{
 
 static Instance_Pointer<J_Font_Manager> s_font_manager;
 static Instance_Pointer<J_UI_Model> s_ui_model;
-void J_UI_Controller::init(){
-	derived_init();
+void J_UI_Controller::init(int argc, char** argv){
+	derived_init(argc, argv);
 }
 
 void J_UI_Controller::initialize_text_data(){

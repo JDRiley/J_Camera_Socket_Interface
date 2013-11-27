@@ -52,7 +52,7 @@ public:
 	~J_Camera_Socket_Controller();
 	J_Font_Face log_font_face()const;
 private:
-	void derived_init()override;
+	void derived_init(int argc, char** argv)override;
 	void poll_events()const;
 	void wait_events()const;
 protected:

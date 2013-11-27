@@ -11,7 +11,7 @@ namespace jomike{
 class J_UI_Controller{
 public:
 	J_UI_Controller();
-	void init();
+	void init(int argc, char** argv);
 	void initialize_text_data();
 	static J_UI_Controller& get_instance();
 	virtual void notify_text_box_release( j_uint text_obj_id, j_size_t cursor_index)=0;
@@ -24,7 +24,7 @@ public:
 	virtual void draw_views()const;
 
 private:
-	virtual void derived_init() = 0;
+	virtual void derived_init(int argc, char** argv) = 0;
 	typedef std::map<j_window_t, J_View_Shared_t> J_View_Cont_t;
 	J_View_Cont_t M_j_views;
 };

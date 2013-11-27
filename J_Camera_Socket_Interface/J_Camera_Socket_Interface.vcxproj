@@ -136,6 +136,9 @@ _WEBSOCKETPP_CPP11_THREAD_;RELEASE_BUILD;_UNICODE;UNICODE;%(PreprocessorDefiniti
     <ClCompile Include="J_Camera_Socket_Interface.cpp" />
     <ClCompile Include="J_Camera_Socket_Model.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -6,10 +6,10 @@
 
 #if WIN32
 
-#ifdef ASDF //RELEASE_BUILD
+#if 0 //RELEASE_BUILD
 int wWinMain(HINSTANCE, HINSTANCE, PTSTR, int){
 #else 
-int main(int, char**){
+int main(int argc, char** argv){
 #endif
 
 #else
@@ -23,7 +23,7 @@ int main(int, char**){
 
 	jtl::Instance_Pointer<jtl::J_Camera_Socket_Controller> controller;
 	try{
-		controller->init();
+		controller->init(argc, argv);
 		controller->execute();
 	}
 	catch (jtl::J_Finished_Exception&){
