@@ -31,11 +31,13 @@
     <ClInclude Include="J_Camera_Stream.h" />
     <ClInclude Include="J_PXC_Color_Stream_Processor.h" />
     <ClInclude Include="J_PXC_Depth_Stream_Processor.h" />
+    <ClInclude Include="J_PXC_Face_Module.h" />
     <ClInclude Include="J_PXC_Face_Processor.h" />
     <ClInclude Include="J_PXC_Fwd_Decl.h" />
     <ClInclude Include="J_PXC_Device.h" />
     <ClInclude Include="j_pxc_face.h" />
     <ClInclude Include="J_PXC_Gesture_Processor.h" />
+    <ClInclude Include="J_PXC_Module.h" />
     <ClInclude Include="J_PXC_Stream.h" />
     <ClInclude Include="J_Stream_Processor.h" />
   </ItemGroup>
@@ -45,9 +47,11 @@
     <ClCompile Include="J_PXC_Color_Stream_Processor.cpp" />
     <ClCompile Include="J_PXC_Depth_Stream_Processor.cpp" />
     <ClCompile Include="J_PXC_Device.cpp" />
+    <ClCompile Include="J_PXC_Face_Module.cpp" />
     <ClCompile Include="J_PXC_Face_Processor.cpp" />
     <ClCompile Include="J_PXC_Fwd_Decl.cpp" />
     <ClCompile Include="J_PXC_Gesture_Processor.cpp" />
+    <ClCompile Include="J_PXC_Module.cpp" />
     <ClCompile Include="J_PXC_Stream.cpp" />
     <ClCompile Include="J_Stream_Processor.cpp" />
   </ItemGroup>

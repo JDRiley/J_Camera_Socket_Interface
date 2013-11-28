@@ -79,6 +79,9 @@ void J_PXC_Stream::finish_stream_processing(){
 	for(auto& processor : M_stream_processes){
 		processor->finish_processing();
 	}
+
+	s_pxc_error = M_sync_points[0]->QueryPtr(&M_image);
+
 	M_sync_points.ReleaseRefs();
 	J_PXC_RELEASE(M_image);
 }

@@ -23,7 +23,9 @@ namespace this_thread = std::this_thread;
 namespace chrono = std::chrono;
 //
 #include <limits>
-
+#include "J_PXC_Module.h"
+//
+#include "J_PXC_Module.h"
 //IO Facilities
 #include <iostream>
 #include "J_PXC_Depth_Stream_Processor.h"
@@ -62,7 +64,12 @@ J_Camera_Manager::J_Camera_Manager(){
 #ifndef VS_2013
 	default_initialization();
 #endif //!VS_2013
-	PXCSession_Create(&M_pxc_session);
+	s_pxc_error = PXCSession_Create(&M_pxc_session);
+	
+	
+	s_pxc_error = load_j_pxc_modules(M_pxc_session);
+
+	NO_PXC_ERROR;
 	init_device_list();
 }
 

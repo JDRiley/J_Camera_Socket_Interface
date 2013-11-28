@@ -5,6 +5,8 @@
 //
 #include "j_pxc_face.h"
 //
+#include "J_PXC_Face_Module.h"
+//
 #include "J_Stream_Processor.h"
 //
 #include "J_PXC_Stream.h"
@@ -27,7 +29,7 @@ private:
 	PXCFaceAnalysis::Detection::ProfileInfo M_face_detection_profile;
 #ifdef VS_2013
 
-
+	J_Face_Module* M_j_face_module = nullptr;
 	PXC_Face_Module M_face_module = nullptr;
 	/*Do not release this pointer. */
 	/*See documentation on releasing from dynamic cast*/

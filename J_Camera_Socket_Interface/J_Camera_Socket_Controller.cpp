@@ -486,7 +486,7 @@ void J_Camera_Socket_Controller::set_stream(j_uint i_device_text_box_id){
 	auto gesture_processor = s_camera_manager->get_gesture_processor();
 	gesture_processor->add_gesture_notification_callback(*M_gesture_handler);
 	gesture_processor->add_gesture_notification_callback(
-							Gesture_Socket_Notification(M_socket)
+		bind(&J_Socket_Server::queue_string, M_socket, bind(&get_json_data_string, std::placeholders::_1))
 						);
 
 

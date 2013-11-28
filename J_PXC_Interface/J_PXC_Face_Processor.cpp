@@ -15,6 +15,7 @@ J_PXC_Face_Processor::J_PXC_Face_Processor(J_PXC_Stream_Shared_t i_stream){
 #ifndef VS_2013
 	void default_initialization();
 #endif
+	s_camera_manager->get_pxc_session().CreateImpl<J_Face_Module>(&M_j_face_module);
 
 	set_parent(i_stream);
 	M_landmark_data.clear();
